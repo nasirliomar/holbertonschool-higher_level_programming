@@ -1,0 +1,8 @@
+7-base_geometry
+================
+
+This module tests the BaseGeometry class.
+
+It includes:
+- area() method that raises an Exception
+- integer_validator() method that validates integers
