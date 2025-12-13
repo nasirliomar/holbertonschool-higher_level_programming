@@ -1,9 +1,0 @@
-7-base_geometry
-================
-
-Test for BaseGeometry integer_validator method.
-
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry()
->>> bg.integer_validator("width", 10)
-
