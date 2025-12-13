@@ -1,22 +1,18 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle class that tracks the number of instances.
-"""
+"""This module defines a class named Rectangle."""
 
 
 class Rectangle:
-    """
-    A class that defines a rectangle and keeps track of the number of instances.
+    """Represents a rectangle.
 
     Attributes:
-        number_of_instances (int): The number of active Rectangle instances.
+        number_of_instances (int): The current number of Rectangle instances.
     """
 
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """
-        Initializes a new Rectangle instance, and increments the instance count.
+        """Initializes a new Rectangle instance.
 
         Args:
             width (int): The width of the rectangle.
@@ -65,27 +61,19 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """
-        Returns a string representation of the rectangle with '#' characters.
-        """
+        """Returns the printable string representation of the rectangle."""
         if self.width == 0 or self.height == 0:
             return ""
-
-        rect_str = []
+        rect_rows = []
         for _ in range(self.height):
-            rect_str.append("#" * self.width)
-        return "\n".join(rect_str)
+            rect_rows.append("#" * self.width)
+        return "\n".join(rect_rows)
 
     def __repr__(self):
-        """
-        Returns a string representation to recreate a new instance.
-        """
+        """Returns the official string representation of the rectangle."""
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """
-        Prints a message and decrements the instance count when a
-        Rectangle is deleted.
-        """
+        """Prints a message when a Rectangle instance is deleted."""
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1```
