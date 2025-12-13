@@ -1,15 +1,20 @@
-class Animal:
-    pass
+#!/usr/bin/python3
+"""
+This module contains a function that checks if an object is exactly
+an instance of a specified class.
+"""
 
-class Dog(Animal):  # Dog is a subclass of Animal
-    pass
 
-my_dog = Dog()
+def is_same_class(obj, a_class):
+    """
+    Returns True if the object is exactly an instance of the specified class;
+    otherwise False.
 
-# Using isinstance() - includes subclasses
-print(isinstance(my_dog, Dog))      # Output: True
-print(isinstance(my_dog, Animal))   # Output: True (This is what we want to avoid)
+    Args:
+        obj: The object to inspect.
+        a_class: The class to match the object's type against.
 
-# Using our is_same_class() function
-print(is_same_class(my_dog, Dog))     # Output: True (Correct)
-print(is_same_class(my_dog, Animal))  # Output: False (Correct)```
+    Returns:
+        True if obj is exactly an instance of a_class, otherwise False.
+    """
+    return type(obj) is a_class
